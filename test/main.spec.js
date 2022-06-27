@@ -51,7 +51,8 @@ describe('San Diego Top Spots', function() {
       .goto(url)
       .wait('table')
       .evaluate(function () {
-        return document.querySelector('tr td').innerHTML
+        console.log(document)
+        return document.querySelector('tr td').innerText
       })
       .end()
       .then(function(text) {
